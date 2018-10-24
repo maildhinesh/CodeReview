@@ -1,0 +1,15 @@
+<div class="login-card">
+    <h1>Log-in</h1><br>
+  <form [formGroup]="loginDetails">
+    <input matInput type="email" placeholder="Username" formControlName="userName">
+    <input type="password" placeholder="Password" formControlName="password">
+    <input type="submit" class="login login-submit" (click)="login(loginDetails.value)" value="login">
+  </form>
+  <div class="login-help">
+    <a routerLink="/register-user" routerLinkActive="active">Register</a> • <a routerLink="/forgot-password" routerLinkActive="active">Forgot Password</a>
+  </div>
+  <div class="login-help">
+    <p [hidden]="loginDetails.controls.userName.valid" style="color:red">User name not valid</p>
+    <p [hidden]="loginDetails.controls.password.valid" style="color:red">Password is required</p>
+    <p [hidden]="showErrorMessage" style="color:red">{{serverError}}</p>
+  </div>

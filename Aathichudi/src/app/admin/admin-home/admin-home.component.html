@@ -1,0 +1,21 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+  <h1>Admin Home</h1>
+  <p *ngIf="registrations.length == 0">No Registrations</p>
+  <div fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+      <div style="font-weight: bold"> Student Name </div>
+      <div style="font-weight: bold"> Status </div>
+      <div style="font-weight: bold">Action</div>
+    </div>
+  <div fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container" *ngFor="let registration of viewRegistrations">
+    <div> {{registration.fullName}} </div>
+    <div> {{registration.status}} </div>
+    <button mat-raised-button *ngIf="registration.action == 'Review'" color="warn" (click)="takeAction(registration.id)">View</button>
+    <button mat-raised-button *ngIf="registration.action == 'View'" color="prmiary" (click)="takeAction(registration.id)">View</button>
+  </div>
+  <div class="empty-container"></div>
+  <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+    <button mat-raised-button color="primary" (click)="createNewRegistration()">Create New</button>
+  </div>
+</div>
+  
+ 

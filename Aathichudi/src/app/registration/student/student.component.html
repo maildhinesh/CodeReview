@@ -1,0 +1,69 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+    <h1>Student Details<span>Enter the Student's Details here</span></h1>
+      <form [formGroup]="studentDetails" >
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <input matInput placeholder="First Name" formControlName="firstName" required [errorStateMatcher]="matcher">
+            <mat-error *ngIf="studentDetails.controls.firstName.errors">First Name is required</mat-error>
+        </mat-form-field>A
+          <mat-form-field>
+            <input matInput placeholder="Last Name" formControlName="lastName" required>
+            <mat-error *ngIf="studentDetails.controls.lastName.errors">Last name is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <mat-select placeholder="Sex" formControlName="sex" required>
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentDetails.controls.sex.errors">Please choose an option</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="DOB" formControlName="dateOfBirth" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="studentDetails.controls.dateOfBirth.errors">Please choose a valid date</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <mat-select placeholder="School Grade" formControlName="schoolGrade">
+              <mat-option *ngFor="let schoolGrade of schoolGrades" [value]="schoolGrade.value">{{ schoolGrade.viewValue}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentDetails.controls.schoolGrade.errors">Please choose an option</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Aathichudi Grade" formControlName="aathichudiGrade">
+              <mat-option *ngFor="let aathichudiGrade of aathichudiGrades" [value]="aathichudiGrade.value">{{ aathichudiGrade.viewValue}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentDetails.controls.aathichudiGrade.errors">Please choose an option</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container" formGroupName="address">
+          <mat-form-field>
+            <input matInput placeholder="Street Name" formControlName="streetName" required>
+            <mat-error *ngIf="studentDetails.controls.address.controls.streetName.errors">Street Name is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="City" formControlName="city" required>
+            <mat-error *ngIf="studentDetails.controls.address.controls.city.errors">City is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container" formGroupName="address">
+          <mat-form-field>
+            <mat-select placeholder="State" formControlName="state" required>
+              <mat-option value="NY">NY</mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentDetails.controls.address.controls.state.errors">Please choose an option</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Zipcode" formControlName="zipcode" required>
+            <mat-error *ngIf="studentDetails.controls.address.controls.zipcode.errors">Zipcode is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+          <button mat-raised-button color="primary" (click)="save(studentDetails.value, studentDetails.valid)">Next</button>
+        </div>
+      </form>
+  </div>

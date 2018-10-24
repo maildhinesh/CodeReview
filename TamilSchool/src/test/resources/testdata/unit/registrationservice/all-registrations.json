@@ -1,0 +1,68 @@
+[
+	{
+		"id" : "REGISTARTION1",
+		"schoolGrade" : "Grade 3",
+		"aathichudiGrade" : "Nilai 1",
+		"status" : "Complete",
+		"Student" : {
+			"firstName" : "Mukilan",
+			"lastName" : "Dhinesh",
+			"parents" : [
+				{
+					"firstName" : "Dhinesh",
+					"lastName" : "Kumararaman",
+					"email" : "maildhinesh@gmail.com"
+				},
+				{
+					"firstName": "Kavitha",
+					"lastName" : "Kasirajan",
+					"email" : "arunmathyk@gmail.com"
+				}
+			]
+		}
+	},
+	{
+		"id" : "REGISTRATION2",
+		"schoolGrade" : "Grade 4",
+		"aathichudiGrade" : "Nilai 2",
+		"status" : "User Input Pending",
+		"Student" : {
+			"firstName" : "Mukilan",
+			"lastName" : "Dhinesh",
+			"parents" : [
+				{
+					"firstName" : "Dhinesh",
+					"lastName" : "Kumararaman",
+					"email" : "maildhinesh@gmail.com"
+				},
+				{
+					"firstName": "Kavitha",
+					"lastName" : "Kasirajan",
+					"email" : "arunmathyk@gmail.com"
+				}
+			]
+		}
+	},
+	{
+		"id" : "REGISTRATION3",
+		"schoolGrade" : "Grade 1",
+		"aathichudiGrade" : "Mazhalai",
+		"status" : "Complete",
+		"Student" : {
+			"firstName" : "Akilan",
+			"lastName" : "Dhinesh",
+			"parents" : [
+				{
+					"firstName" : "Dhinesh",
+					"lastName" : "Kumararaman",
+					"email" : "maildhinesh@gmail.com"
+				},
+				{
+					"firstName": "Kavitha",
+					"lastName" : "Kasirajan",
+					"email" : "arunmathyk@gmail.com"
+				}
+			]
+		}
+	}
+]

@@ -1,0 +1,58 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+    <h1>Emergency Contact #1 <span>Enter first emergency contact here!</span></h1>
+    <form [formGroup] = "emergencyContactOneDetails">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <input matInput placeholder="Contact Name" formControlName="contactName">
+            <mat-error *ngIf="!emergencyContactOneDetails.controls.contactName.valid"></mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Relationship" formControlName="relationship">
+            <mat-error *ngIf="!emergencyContactOneDetails.controls.relationship.valid"></mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <input matInput type="tel" placeholder="Home Phone" formControlName="homePhone">
+            <mat-error *ngIf="!emergencyContactOneDetails.controls.homePhone.valid"></mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="tel" placeholder="Cell Phone" formControlName="cellPhone">
+            <mat-error *ngIf="!emergencyContactOneDetails.controls.cellPhone.valid"></mat-error>
+          </mat-form-field>
+        </div>
+    </form>
+    <div class="empty-container"></div>
+    <h1>Emergency Contact #2 <span>Enter second emergency here!</span></h1>
+    <form [formGroup] = "emergencyContactTwoDetails">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <input matInput placeholder="Contact Name" formControlName="contactName">
+            <mat-error *ngIf="!emergencyContactTwoDetails.controls.contactName.valid"></mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Relationship" formControlName="relationship">
+            <mat-error *ngIf="!emergencyContactTwoDetails.controls.relationship.valid"></mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <input matInput type="tel" placeholder="Home Phone" formControlName="homePhone">
+            <mat-error *ngIf="!emergencyContactTwoDetails.controls.homePhone.valid"></mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="tel" placeholder="Cell Phone" formControlName="cellPhone">
+            <mat-error *ngIf="!emergencyContactTwoDetails.controls.cellPhone.valid"></mat-error>
+          </mat-form-field>
+        </div>
+    </form>
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <div fxFlex="20">
+        <button mat-raised-button color="warn" (click)="back()">Back</button>
+      </div>
+      <div fxFlex="60"></div>
+      <div fxFlex="20">
+        <button mat-raised-button color="primary" (click)="save(emergencyContactOneDetails.value, emergencyContactTwoDetails.value, emergencyContactOneDetails.valid && emergencyContactTwoDetails.valid)">Next</button>
+      </div>
+    </div>
+</div>

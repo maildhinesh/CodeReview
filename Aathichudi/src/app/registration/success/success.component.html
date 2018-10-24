@@ -1,0 +1,17 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+  <h1 class="successBanner">Successfully Registered</h1>
+  <form [formGroup]="successGroup">
+  <div fxLayout="column" fxLayoutAlign="start center" class="flex-container">
+    <p>Student added Succesfully!</p>
+    <button mat-raised-button color="primary" (click)="addNewStudent()"><mat-icon>add</mat-icon>Add New</button>
+    <mat-checkbox formControlName="copyStudent" [hidden]="!showControls">Copy Student Address</mat-checkbox> 
+    <mat-checkbox formControlName="copyParents" [hidden]="!showControls">Copy Parents</mat-checkbox>
+    <mat-checkbox formControlName="copyEmergencyContacts" [hidden]="!showControls">Copy Emergency Contacts</mat-checkbox>
+    <mat-checkbox formControlName="copyInsuranceInfo" [hidden]="!showControls">Copy Insurance Info</mat-checkbox>
+  </div>
+  </form>
+  <div class="empty-container"></div>
+  <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+    <button mat-raised-button color="primary" (click)="continue()">Continue</button>
+  </div>
+</div>

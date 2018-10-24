@@ -1,0 +1,197 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Registration
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Registration Date</label>
+        <div>{{registration.registrationDate}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Status</label>
+        <div>{{registration.status}}</div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Student
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>First Name</label>
+        <div>{{registration.student?.firstName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Last Name</label>
+        <div>{{registration.student?.lastName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Date of Birth</label>
+        <div>{{registration.student?.dateOfBirth}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Sex</label>
+        <div>{{registration.student?.sex}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>School Grade</label>
+        <div>{{registration.schoolGrade}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Aathichudi Grade</label>
+        <div>{{registration.aathichudiGrade}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Address</label>
+        <p>{{registration.student?.address?.streetName}} <br/>
+           {{registration.student?.address?.city}}, {{registration.student?.address?.state}} - {{registration.student?.address?.zipcode}}</p>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Parent - One
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>First Name</label>
+        <div>{{registration.student?.parents && registration.student?.parents[0]?.firstName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Last Name</label>
+        <div>{{registration.student?.parents && registration.student?.parents[0]?.lastName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Email</label>
+        <div>{{registration.student?.parents && registration.student?.parents[0]?.email}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Primary</label>
+        <div>{{registration.student?.parents && registration.student?.parents[0]?.isPrimary}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Home Phone</label>
+        <div>{{registration.student?.parents && registration.student?.parents[0]?.homePhone}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Cell Phone</label>
+        <div>{{registration.student?.parents && registration.student?.parents[0]?.cellPhone}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Address</label>
+        <div><p>{{registration.student?.parents && registration.student?.parents[0]?.address?.streetName}} <br/>
+           {{registration.student?.parents && registration.student?.parents[0]?.address?.city}}, {{registration.student?.parents && registration.student?.parents[0]?.address?.state}} - {{registration.student?.parents && registration.student?.parents[0]?.address?.zipcode}}</p>
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Parent - Two
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>First Name</label>
+        <div>{{registration.student?.parents && registration.student?.parents[1]?.firstName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Last Name</label>
+        <div>{{registration.student?.parents && registration.student?.parents[1]?.lastName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Email</label>
+        <div>{{registration.student?.parents && registration.student?.parents[1]?.email}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Primary</label>
+        <div>{{registration.student?.parents && registration.student?.parents[1]?.isPrimary}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Home Phone</label>
+        <div>{{registration.student?.parents && registration.student?.parents[1]?.homePhone}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Cell Phone</label>
+        <div>{{registration.student?.parents && registration.student?.parents[1]?.cellPhone}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Address</label>
+        <p>{{registration.student?.parents && registration.student?.parents[1]?.address?.streetName}} <br/>
+            {{registration.student?.parents && registration.student?.parents[1]?.address?.city}}, {{registration.student?.parents && registration.student?.parents[1]?.address?.state}} - {{registration.student?.parents && registration.student?.parents[1]?.address?.zipcode}}</p>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Emergency Contact - One
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Contact Name</label>
+        <div>{{registration.student?.emergencyContacts && registration.student?.emergencyContacts[0]?.contactName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Relationship</label>
+        <div>{{registration.student?.emergencyContacts && registration.student?.emergencyContacts[0]?.relationship}}</div>
+      </div>       
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Home Phone</label>
+        <div>{{registration.student?.emergencyContacts && registration.student?.emergencyContacts[0]?.homePhone}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Cell Phone</label>
+        <div>{{registration.student?.emergencyContacts && registration.student?.emergencyContacts[0]?.cellPhone}}</div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Emergency Contact - One
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Contact Name</label>
+        <div>{{registration.student?.emergencyContacts && registration.student?.emergencyContacts[1]?.contactName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Relationship</label>
+        <div>{{registration.student?.emergencyContacts && registration.student?.emergencyContacts[1]?.relationship}}</div>
+      </div>       
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Home Phone</label>
+        <div>{{registration.student?.emergencyContacts && registration.student?.emergencyContacts[1]?.homePhone}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Cell Phone</label>
+        <div>{{registration.student?.emergencyContacts && registration.student?.emergencyContacts[1]?.cellPhone}}</div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Insurance Info
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Provider Name</label>
+        <div>{{registration.student?.insuranceInfo?.contactName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Insurance Id</label>
+        <div>{{registration.student?.insuranceInfo?.insuranceId}}</div>
+      </div>       
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Doctor Name</label>
+        <div>{{registration.student?.insuranceInfo?.doctorName}}</div>
+      </div>
+      <div class="panelrow" fxlayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="flex-container">
+        <label>Doctor Contact</label>
+        <div>{{registration.student?.insuranceInfo?.doctorContact}}</div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

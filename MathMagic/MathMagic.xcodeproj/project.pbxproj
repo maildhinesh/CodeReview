@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A3A5969216DA90600DCA7E4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3A5968216DA90600DCA7E4 /* AVFoundation.framework */; };
+		1A3A596B216F22A700DCA7E4 /* LearnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3A596A216F22A700DCA7E4 /* LearnTableViewController.swift */; };
+		1A3A596E216FC87D00DCA7E4 /* TableRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3A596D216FC87D00DCA7E4 /* TableRowView.xib */; };
+		1A3A5970216FC91B00DCA7E4 /* UITableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3A596F216FC91B00DCA7E4 /* UITableRowView.swift */; };
+		1A3A59722170418000DCA7E4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3A59712170418000DCA7E4 /* QuizViewController.swift */; };
+		1AB773972023FADC0026CB88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB773962023FADC0026CB88 /* AppDelegate.swift */; };
+		1AB773992023FADC0026CB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB773982023FADC0026CB88 /* ViewController.swift */; };
+		1AB7739C2023FADC0026CB88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB7739A2023FADC0026CB88 /* Main.storyboard */; };
+		1AB7739F2023FADC0026CB88 /* MathMagic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7739D2023FADC0026CB88 /* MathMagic.xcdatamodeld */; };
+		1AB773A12023FADC0026CB88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB773A02023FADC0026CB88 /* Assets.xcassets */; };
+		1AB773A42023FADC0026CB88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB773A22023FADC0026CB88 /* LaunchScreen.storyboard */; };
+		1AB773AF2023FADC0026CB88 /* MathMagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB773AE2023FADC0026CB88 /* MathMagicTests.swift */; };
+		1AB773BA2023FADC0026CB88 /* MathMagicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB773B92023FADC0026CB88 /* MathMagicUITests.swift */; };
+		70FC7A4925838587C4EAE57E /* Pods_MathMagic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1CF2EEF0F4EA6B39945512 /* Pods_MathMagic.framework */; };
+		D14E7128EF2D8408C006FF5D /* Pods_MathMagicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA1ABAF8CA6DDCD8572E865 /* Pods_MathMagicUITests.framework */; };
+		E3328A027CC4ADD05320AFEB /* Pods_MathMagicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1A8C98A12A770A6E63443 /* Pods_MathMagicTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1AB773AB2023FADC0026CB88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AB7738B2023FADC0026CB88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB773922023FADC0026CB88;
+			remoteInfo = MathMagic;
+		};
+		1AB773B62023FADC0026CB88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AB7738B2023FADC0026CB88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB773922023FADC0026CB88;
+			remoteInfo = MathMagic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15D701ACF52E2238B687B13D /* Pods-MathMagic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathMagic.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathMagic/Pods-MathMagic.release.xcconfig"; sourceTree = "<group>"; };
+		1A3A5968216DA90600DCA7E4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1A3A596A216F22A700DCA7E4 /* LearnTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTableViewController.swift; sourceTree = "<group>"; };
+		1A3A596D216FC87D00DCA7E4 /* TableRowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableRowView.xib; sourceTree = "<group>"; };
+		1A3A596F216FC91B00DCA7E4 /* UITableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableRowView.swift; sourceTree = "<group>"; };
+		1A3A59712170418000DCA7E4 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		1AB773932023FADC0026CB88 /* MathMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB773962023FADC0026CB88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1AB773982023FADC0026CB88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1AB7739B2023FADC0026CB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AB7739E2023FADC0026CB88 /* MathMagic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MathMagic.xcdatamodel; sourceTree = "<group>"; };
+		1AB773A02023FADC0026CB88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AB773A32023FADC0026CB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1AB773A52023FADC0026CB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB773AA2023FADC0026CB88 /* MathMagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathMagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB773AE2023FADC0026CB88 /* MathMagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathMagicTests.swift; sourceTree = "<group>"; };
+		1AB773B02023FADC0026CB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB773B52023FADC0026CB88 /* MathMagicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathMagicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB773B92023FADC0026CB88 /* MathMagicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathMagicUITests.swift; sourceTree = "<group>"; };
+		1AB773BB2023FADC0026CB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50F02FCC443E0BB7E51EA908 /* Pods-MathMagicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathMagicUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathMagicUITests/Pods-MathMagicUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5A1CF2EEF0F4EA6B39945512 /* Pods_MathMagic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MathMagic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E1A8C98A12A770A6E63443 /* Pods_MathMagicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MathMagicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		768B3A688FDE95ACA247D50E /* Pods-MathMagicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathMagicUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathMagicUITests/Pods-MathMagicUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7ED108C97984BEEC06E51C25 /* Pods-MathMagic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathMagic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathMagic/Pods-MathMagic.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA1ABAF8CA6DDCD8572E865 /* Pods_MathMagicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MathMagicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61E4124FFBCD82716EDD166 /* Pods-MathMagicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathMagicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathMagicTests/Pods-MathMagicTests.release.xcconfig"; sourceTree = "<group>"; };
+		D43E854987CF6451D7459E4C /* Pods-MathMagicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathMagicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathMagicTests/Pods-MathMagicTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AB773902023FADC0026CB88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A3A5969216DA90600DCA7E4 /* AVFoundation.framework in Frameworks */,
+				70FC7A4925838587C4EAE57E /* Pods_MathMagic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB773A72023FADC0026CB88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3328A027CC4ADD05320AFEB /* Pods_MathMagicTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB773B22023FADC0026CB88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14E7128EF2D8408C006FF5D /* Pods_MathMagicUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A3A596C216FC82F00DCA7E4 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				1A3A596D216FC87D00DCA7E4 /* TableRowView.xib */,
+				1A3A596F216FC91B00DCA7E4 /* UITableRowView.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		1AB7738A2023FADC0026CB88 = {
+			isa = PBXGroup;
+			children = (
+				1AB773952023FADC0026CB88 /* MathMagic */,
+				1AB773AD2023FADC0026CB88 /* MathMagicTests */,
+				1AB773B82023FADC0026CB88 /* MathMagicUITests */,
+				1AB773942023FADC0026CB88 /* Products */,
+				3E1A5CCC8E591A9E89E1625F /* Pods */,
+				B33CE0768B0B045B0F2F7CB9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1AB773942023FADC0026CB88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AB773932023FADC0026CB88 /* MathMagic.app */,
+				1AB773AA2023FADC0026CB88 /* MathMagicTests.xctest */,
+				1AB773B52023FADC0026CB88 /* MathMagicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AB773952023FADC0026CB88 /* MathMagic */ = {
+			isa = PBXGroup;
+			children = (
+				1A3A596C216FC82F00DCA7E4 /* ReusableViews */,
+				1AB773962023FADC0026CB88 /* AppDelegate.swift */,
+				1AB773982023FADC0026CB88 /* ViewController.swift */,
+				1AB7739A2023FADC0026CB88 /* Main.storyboard */,
+				1AB773A02023FADC0026CB88 /* Assets.xcassets */,
+				1AB773A22023FADC0026CB88 /* LaunchScreen.storyboard */,
+				1AB773A52023FADC0026CB88 /* Info.plist */,
+				1AB7739D2023FADC0026CB88 /* MathMagic.xcdatamodeld */,
+				1A3A596A216F22A700DCA7E4 /* LearnTableViewController.swift */,
+				1A3A59712170418000DCA7E4 /* QuizViewController.swift */,
+			);
+			path = MathMagic;
+			sourceTree = "<group>";
+		};
+		1AB773AD2023FADC0026CB88 /* MathMagicTests */ = {
+			isa = PBXGroup;
+			children = (
+				1AB773AE2023FADC0026CB88 /* MathMagicTests.swift */,
+				1AB773B02023FADC0026CB88 /* Info.plist */,
+			);
+			path = MathMagicTests;
+			sourceTree = "<group>";
+		};
+		1AB773B82023FADC0026CB88 /* MathMagicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1AB773B92023FADC0026CB88 /* MathMagicUITests.swift */,
+				1AB773BB2023FADC0026CB88 /* Info.plist */,
+			);
+			path = MathMagicUITests;
+			sourceTree = "<group>";
+		};
+		3E1A5CCC8E591A9E89E1625F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ED108C97984BEEC06E51C25 /* Pods-MathMagic.debug.xcconfig */,
+				15D701ACF52E2238B687B13D /* Pods-MathMagic.release.xcconfig */,
+				D43E854987CF6451D7459E4C /* Pods-MathMagicTests.debug.xcconfig */,
+				B61E4124FFBCD82716EDD166 /* Pods-MathMagicTests.release.xcconfig */,
+				768B3A688FDE95ACA247D50E /* Pods-MathMagicUITests.debug.xcconfig */,
+				50F02FCC443E0BB7E51EA908 /* Pods-MathMagicUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B33CE0768B0B045B0F2F7CB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A3A5968216DA90600DCA7E4 /* AVFoundation.framework */,
+				5A1CF2EEF0F4EA6B39945512 /* Pods_MathMagic.framework */,
+				62E1A8C98A12A770A6E63443 /* Pods_MathMagicTests.framework */,
+				9FA1ABAF8CA6DDCD8572E865 /* Pods_MathMagicUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AB773922023FADC0026CB88 /* MathMagic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AB773BE2023FADC0026CB88 /* Build configuration list for PBXNativeTarget "MathMagic" */;
+			buildPhases = (
+				AE1C3416EA2F119C23A3CA10 /* [CP] Check Pods Manifest.lock */,
+				1AB7738F2023FADC0026CB88 /* Sources */,
+				1AB773902023FADC0026CB88 /* Frameworks */,
+				1AB773912023FADC0026CB88 /* Resources */,
+				73715CF237A28A0F5C19FAC0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathMagic;
+			productName = MathMagic;
+			productReference = 1AB773932023FADC0026CB88 /* MathMagic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1AB773A92023FADC0026CB88 /* MathMagicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AB773C12023FADC0026CB88 /* Build configuration list for PBXNativeTarget "MathMagicTests" */;
+			buildPhases = (
+				DFD9652CC748337DE42E4CE1 /* [CP] Check Pods Manifest.lock */,
+				1AB773A62023FADC0026CB88 /* Sources */,
+				1AB773A72023FADC0026CB88 /* Frameworks */,
+				1AB773A82023FADC0026CB88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AB773AC2023FADC0026CB88 /* PBXTargetDependency */,
+			);
+			name = MathMagicTests;
+			productName = MathMagicTests;
+			productReference = 1AB773AA2023FADC0026CB88 /* MathMagicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1AB773B42023FADC0026CB88 /* MathMagicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AB773C42023FADC0026CB88 /* Build configuration list for PBXNativeTarget "MathMagicUITests" */;
+			buildPhases = (
+				D44CD13F347BA8CDA6E74612 /* [CP] Check Pods Manifest.lock */,
+				1AB773B12023FADC0026CB88 /* Sources */,
+				1AB773B22023FADC0026CB88 /* Frameworks */,
+				1AB773B32023FADC0026CB88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AB773B72023FADC0026CB88 /* PBXTargetDependency */,
+			);
+			name = MathMagicUITests;
+			productName = MathMagicUITests;
+			productReference = 1AB773B52023FADC0026CB88 /* MathMagicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AB7738B2023FADC0026CB88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Kavin Unlimited";
+				TargetAttributes = {
+					1AB773922023FADC0026CB88 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					1AB773A92023FADC0026CB88 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1AB773922023FADC0026CB88;
+					};
+					1AB773B42023FADC0026CB88 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1AB773922023FADC0026CB88;
+					};
+				};
+			};
+			buildConfigurationList = 1AB7738E2023FADC0026CB88 /* Build configuration list for PBXProject "MathMagic" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1AB7738A2023FADC0026CB88;
+			productRefGroup = 1AB773942023FADC0026CB88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AB773922023FADC0026CB88 /* MathMagic */,
+				1AB773A92023FADC0026CB88 /* MathMagicTests */,
+				1AB773B42023FADC0026CB88 /* MathMagicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AB773912023FADC0026CB88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A3A596E216FC87D00DCA7E4 /* TableRowView.xib in Resources */,
+				1AB773A42023FADC0026CB88 /* LaunchScreen.storyboard in Resources */,
+				1AB773A12023FADC0026CB88 /* Assets.xcassets in Resources */,
+				1AB7739C2023FADC0026CB88 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB773A82023FADC0026CB88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB773B32023FADC0026CB88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73715CF237A28A0F5C19FAC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MathMagic/Pods-MathMagic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MathMagic/Pods-MathMagic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE1C3416EA2F119C23A3CA10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MathMagic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D44CD13F347BA8CDA6E74612 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MathMagicUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFD9652CC748337DE42E4CE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MathMagicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AB7738F2023FADC0026CB88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A3A5970216FC91B00DCA7E4 /* UITableRowView.swift in Sources */,
+				1AB773992023FADC0026CB88 /* ViewController.swift in Sources */,
+				1AB7739F2023FADC0026CB88 /* MathMagic.xcdatamodeld in Sources */,
+				1A3A59722170418000DCA7E4 /* QuizViewController.swift in Sources */,
+				1A3A596B216F22A700DCA7E4 /* LearnTableViewController.swift in Sources */,
+				1AB773972023FADC0026CB88 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB773A62023FADC0026CB88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB773AF2023FADC0026CB88 /* MathMagicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB773B12023FADC0026CB88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB773BA2023FADC0026CB88 /* MathMagicUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AB773AC2023FADC0026CB88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AB773922023FADC0026CB88 /* MathMagic */;
+			targetProxy = 1AB773AB2023FADC0026CB88 /* PBXContainerItemProxy */;
+		};
+		1AB773B72023FADC0026CB88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AB773922023FADC0026CB88 /* MathMagic */;
+			targetProxy = 1AB773B62023FADC0026CB88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1AB7739A2023FADC0026CB88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AB7739B2023FADC0026CB88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1AB773A22023FADC0026CB88 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AB773A32023FADC0026CB88 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AB773BC2023FADC0026CB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1AB773BD2023FADC0026CB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AB773BF2023FADC0026CB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED108C97984BEEC06E51C25 /* Pods-MathMagic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AP2UZ2Q9JQ;
+				INFOPLIST_FILE = MathMagic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavinunlimited.MathMagic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1AB773C02023FADC0026CB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15D701ACF52E2238B687B13D /* Pods-MathMagic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AP2UZ2Q9JQ;
+				INFOPLIST_FILE = MathMagic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavinunlimited.MathMagic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		1AB773C22023FADC0026CB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D43E854987CF6451D7459E4C /* Pods-MathMagicTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AP2UZ2Q9JQ;
+				INFOPLIST_FILE = MathMagicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavinunlimited.MathMagicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathMagic.app/MathMagic";
+			};
+			name = Debug;
+		};
+		1AB773C32023FADC0026CB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B61E4124FFBCD82716EDD166 /* Pods-MathMagicTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AP2UZ2Q9JQ;
+				INFOPLIST_FILE = MathMagicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavinunlimited.MathMagicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathMagic.app/MathMagic";
+			};
+			name = Release;
+		};
+		1AB773C52023FADC0026CB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768B3A688FDE95ACA247D50E /* Pods-MathMagicUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AP2UZ2Q9JQ;
+				INFOPLIST_FILE = MathMagicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavinunlimited.MathMagicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MathMagic;
+			};
+			name = Debug;
+		};
+		1AB773C62023FADC0026CB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50F02FCC443E0BB7E51EA908 /* Pods-MathMagicUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AP2UZ2Q9JQ;
+				INFOPLIST_FILE = MathMagicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavinunlimited.MathMagicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MathMagic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AB7738E2023FADC0026CB88 /* Build configuration list for PBXProject "MathMagic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB773BC2023FADC0026CB88 /* Debug */,
+				1AB773BD2023FADC0026CB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AB773BE2023FADC0026CB88 /* Build configuration list for PBXNativeTarget "MathMagic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB773BF2023FADC0026CB88 /* Debug */,
+				1AB773C02023FADC0026CB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AB773C12023FADC0026CB88 /* Build configuration list for PBXNativeTarget "MathMagicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB773C22023FADC0026CB88 /* Debug */,
+				1AB773C32023FADC0026CB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AB773C42023FADC0026CB88 /* Build configuration list for PBXNativeTarget "MathMagicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB773C52023FADC0026CB88 /* Debug */,
+				1AB773C62023FADC0026CB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1AB7739D2023FADC0026CB88 /* MathMagic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1AB7739E2023FADC0026CB88 /* MathMagic.xcdatamodel */,
+			);
+			currentVersion = 1AB7739E2023FADC0026CB88 /* MathMagic.xcdatamodel */;
+			path = MathMagic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1AB7738B2023FADC0026CB88 /* Project object */;
+}

@@ -1,0 +1,14 @@
+<div class="login-card">
+  <h1>Register</h1><br>
+<form [formGroup]="userRegistration">
+  <input matInput type="email" placeholder="Email" formControlName="userName">
+  <input type="password" placeholder="Password" formControlName="password">
+  <input type="password" placeholder="Repeat Password" formControlName="repeatPassword">
+  <input type="submit" class="login login-submit" (click)="register(userRegistration.value)" value="login">
+</form>
+<div class="login-help">
+  Already signed up. <a routerLink="/login" routerLinkActive="active">Login</a>•
+</div>
+<div class="login-help">
+  <p [hidden]="showErrorMessage" style="color:red">{{serverError}}</p>
+</div>

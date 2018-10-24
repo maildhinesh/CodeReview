@@ -1,0 +1,122 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+  <h1>Parent #1 <span>Enter first parent's details here!</span></h1>
+  <form [formGroup] = "parentOneDetails">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+        <mat-form-field>
+          <input matInput placeholder="First Name" formControlName="firstName" required>
+          <mat-error *ngIf="parentOneDetails.controls.firstName.errors">First name required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last Name" formControlName="lastName" required>
+          <mat-error *ngIf="parentOneDetails.controls.lastName.errors">Last name required</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+        <mat-form-field>
+          <input matInput placeholder="email" type="email" formControlName="email" required>
+          <mat-error *ngIf="!parentOneDetails.controls.email.valid">Email is not valid</mat-error>
+        </mat-form-field>
+        <mat-checkbox formControlName="isPrimary">Primary</mat-checkbox>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+        <mat-form-field>
+          <input matInput type="tel" placeholder="Home Phone" formControlName="homePhone" required>
+          <mat-error *ngIf="!parentOneDetails.controls.homePhone.valid">Phone is not valid</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="tel" placeholder="Cell Phone" formControlName="cellPhone" required>
+          <mat-error *ngIf="!parentOneDetails.controls.homePhone.valid">Cell phone is not valid</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+        <mat-checkbox (click)="copyStudentsAddress('ONE')">Copy from Student</mat-checkbox>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container" formGroupName="address">
+        <mat-form-field>
+          <input matInput placeholder="Street Name" formControlName="streetName" required>
+          <mat-error *ngIf="!parentOneDetails.controls.address.controls.streetName.valid">Street Name required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="City" formControlName="city" required>
+          <mat-error *ngIf="!parentOneDetails.controls.address.controls.city.valid">City required</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container" formGroupName="address">
+        <mat-form-field>
+          <mat-select placeholder="State" formControlName="state" required>
+            <mat-option value="NY">NY</mat-option>
+          </mat-select>
+          <mat-error *ngIf="!parentOneDetails.controls.address.controls.state.valid">State Name required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Zip Code" formControlName="zipcode" required>
+          <mat-error *ngIf="!parentOneDetails.controls.address.controls.zipcode.valid">Zipcode required</mat-error>
+        </mat-form-field>
+      </div>
+  </form>
+  <div class="empty-container"></div>
+  <h1>Parent #2 <span>Enter second parent's details here!</span></h1>
+  <form [formGroup] = "parentTwoDetails">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+        <mat-form-field>
+          <input matInput placeholder="First Name" formControlName="firstName" required>
+          <mat-error *ngIf="parentTwoDetails.controls.firstName.errors">First name required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last Name" formControlName="lastName" required>
+          <mat-error *ngIf="parentTwoDetails.controls.lastName.errors">Last name required</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+        <mat-form-field>
+          <input matInput placeholder="email" type="email" formControlName="email" required>
+          <mat-error *ngIf="!parentTwoDetails.controls.email.valid">Email is not valid</mat-error>
+        </mat-form-field>
+        <mat-checkbox formControlName="isPrimary">Primary</mat-checkbox>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+        <mat-form-field>
+          <input matInput type="tel" placeholder="Home Phone" formControlName="homePhone" required>
+          <mat-error *ngIf="!parentTwoDetails.controls.homePhone.valid">Phone is not valid</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="tel" placeholder="Cell Phone" formControlName="cellPhone" required>
+          <mat-error *ngIf="!parentTwoDetails.controls.homePhone.valid">Cell phone is not valid</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+        <mat-checkbox (click)="copyStudentsAddress('TWO')">Copy from Student</mat-checkbox>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container" formGroupName="address">
+        <mat-form-field>
+          <input matInput placeholder="Street Name" formControlName="streetName" required>
+          <mat-error *ngIf="!parentTwoDetails.controls.address.controls.streetName.valid">Street Name required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="City" formControlName="city" required>
+          <mat-error *ngIf="!parentTwoDetails.controls.address.controls.city.valid">City required</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container" formGroupName="address">
+        <mat-form-field>
+          <mat-select placeholder="State" formControlName="state" required>
+            <mat-option value="NY">NY</mat-option>
+          </mat-select>
+          <mat-error *ngIf="!parentTwoDetails.controls.address.controls.state.valid">State Name required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Zip Code" formControlName="zipcode" required>
+          <mat-error *ngIf="!parentTwoDetails.controls.address.controls.zipcode.valid">Zipcode required</mat-error>
+        </mat-form-field>
+      </div>
+  </form>
+  <div fxLayout="row" fxLayoutAlign="end center">
+    <div fxFlex="20">
+        <button mat-raised-button color="warn" (click)="back()">Back</button>
+    </div>
+    <div fxFlex="60"></div>
+    <div fxFlex="20">
+      <button mat-raised-button color="primary" (click)="save(parentOneDetails.value, parentTwoDetails.value)">Next</button>
+    </div>
+  </div>
+</div>

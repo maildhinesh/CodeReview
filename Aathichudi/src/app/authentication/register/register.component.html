@@ -1,0 +1,80 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+  <h1>Register User</h1>
+    <div *ngIf="register">
+      <form [formGroup]="userRegistrationDetails" >
+        <div fxLayout="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="userRegistrationDetails.controls.email.hasError('email') && !userRegistrationDetails.controls.email.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="userRegistrationDetails.controls.email.hasError('required')">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="First Name" formControlName="firstName" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="firstName.hasError('required')">First name is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Last Name" formControlName="lastName" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="lastName.hasError('required')">First name is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" app-compare="verifyPassword" parent="true" formControlName="password" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Verify Password" formControlName="verifyPassword" app-compare="password" parent="false" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="verifyPassword.hasError('compare') && !verifyPassword.hasError('required')">
+              Passwords Don't match!
+            </mat-error>
+            <mat-error *ngIf="verifyPassword.hasError('required')">
+              Verify password is a required field!
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+      <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+        <button mat-raised-button color="primary" (click)="save(userRegistrationDetails.value, userRegistrationDetails.valid)">Register</button>
+      </div>
+    </div>
+    <div *ngIf="showConfirmation">
+      <form [formGroup]="verifyStudent" >
+        <div fxLayout="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <input matInput placeholder="Student First Name" formControlName="firstName" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="studentFirstName.hasError('required')">
+              Student first name required!
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Student Last Name" formControlName="lastName" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="studentLastName.hasError('required')">Student Last Name required!</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="DOB" formControlName="dateOfBirth" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="studentDOB.hasError('required')">Student DOB is required!</mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+      <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+        <button mat-raised-button color="primary" (click)="validate(verifyStudent.value, verifyStudent.valid)">Verify Student</button>
+      </div>
+    </div>
+    <div *ngIf="showSuccess">
+      <form [formGroup]="activateAccount">
+        <div fxLayout="column" fxLayoutAlign="space-around center" class="flex-container">
+          <mat-form-field>
+            <input matInput type="number" placeholder="Activation Pin" formControlName="activationPin" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="activationPin.hasError('required')">Pin is required</mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+      <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+        <button mat-raised-button color="primary" (click)="activate(activateAccount.value, activateAccount.valid)">Activatet</button>
+      </div>
+    </div>
+</div>

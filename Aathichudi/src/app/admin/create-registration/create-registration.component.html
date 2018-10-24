@@ -1,0 +1,54 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+  <h1>Parent Details<span>Enter the Student's Details here</span></h1>
+  <form [formGroup]="registrationRequest">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="firstName" required [errorStateMatcher]="matcher">
+        <mat-error *ngIf="firstNameControl.hasError('required')">
+          Parent First name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="lastName" required [errorStateMatcher]="matcher">
+        <mat-error *ngIf="lastNameControl.hasError('required')">
+          Parent Lastname is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" type="email" formControlName="email" [errorStateMatcher]="matcher">
+        <mat-error *ngIf="emailControl.hasError('email') && !emailControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailControl.hasError('required')">
+          Parent Email is a required field
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="empty-container"></div>
+    <h1>Student Details</h1>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container" [formGroup]="studentRequest">
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="firstName" required [errorStateMatcher]="matcher">
+        <mat-error *ngIf="studentFNControl.hasError('required')">
+          Student First name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="lastName" required [errorStateMatcher]="matcher">
+        <mat-error *ngIf="studentLNControl.hasError('required')">
+          Student Lastname is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Aathichudi Grade" formControlName="aathichudiGrade">
+          <mat-option *ngFor="let aathichudiGrade of aathichudiGrades" [value]="aathichudiGrade.value">{{ aathichudiGrade.viewValue}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="aathichudiGradeControl.hasError('required')">Please choose an option</mat-error>
+      </mat-form-field>
+    </div>
+    <p [hidden]="showErrorMessage" style="color:red">{{errorMessage}}</p>
+    <div fxLayout="row" dir="rtl" fxLayoutAlign="right right">
+      <button mat-raised-button color="primary" (click)="createUser(registrationRequest.value, registrationRequest.valid)">Create Registration</button>
+    </div>
+  </form>
+</div>

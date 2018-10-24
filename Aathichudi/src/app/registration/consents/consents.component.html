@@ -1,0 +1,51 @@
+<div fxFlex ngClass="container" ngClass.xs="container-xs">
+  <h1>Insurance Information <span>Please enter your insurance information</span></h1>
+  <form [formGroup]="insuranceInfo">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+        <mat-form-field>
+          <input matInput placeholder="Insurance Provider" formControlName="insuranceProvider" required>
+          <mat-error *ngIf="!insuranceInfo.controls.insuranceProvider.valid">Insurance Provider is a required field</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Insurance Id" formControlName="insuranceId" required>
+          <mat-error *ngIf="!insuranceInfo.controls.insuranceId.valid">Insurance ID is a required field</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" class="flex-container">
+        <mat-form-field>
+          <input matInput placeholder="Doctor Name" formControlName="doctor" required>
+          <mat-error *ngIf="!insuranceInfo.controls.doctor.valid">Doctor is a required field</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="tel" placeholder="Doctor Phone" formControlName="doctorContact" required>
+          <mat-error *ngIf="!insuranceInfo.controls.doctorContact.valid">Doctor Phone is a required Field</mat-error>
+        </mat-form-field>
+      </div>
+  </form>
+  <div class="empty-container"></div>
+  <h1>Insurance Release Consent</h1>
+  <form [formGroup]="insuranceConsent">
+    <div fxLayout="column" fxLayoutAlign="space-around center" class="flex-container">
+      <p>I understand that I will be notified in case of a medical emergency involving my child. In the event that I cannot be reached, I authorize the calling of a doctor and providing of necessary medical services in the event of my child is injured or becomes ill.</p>
+      <p>I understand that Aathichudi Arunthamizh Palli will not be responsible for the medical expenses incurred, but that such expenses will be my responsibility as parent/guardian</p>
+      <mat-checkbox formControlName="insuranceConsent">I agree</mat-checkbox>
+    </div>
+  </form>
+  <div class="empty-container"></div>
+  <h1>Photo Release Consent</h1>
+  <form [formGroup]="photoConsent">
+    <div fxLayout="column" fxLayoutAlign="space-around center" class="flex-container">
+      <p>I hereby give permission for my child to be photographed during Aathichudi Arunthamizh Palli. I understand the photos will be used to keep a journal of activities, to share during powerpoint presentations and/or for promotional purposes including flyers, brochures, newspaper and on the internet. I understand that although my child's photograph may be used for advertising, his/her identity will not be disclosed. I do not expect compensation and that all photos are the property of Aathichudi Arunthamizh Palli and its affiliates.</p>
+      <mat-checkbox formControlName="photoConsent">I agree</mat-checkbox>
+    </div>
+  </form>
+  <div fxLayout="row" fxLayoutAlign="end center">
+    <div fxFlex="20">
+      <button mat-raised-button color="warn" (click)="back()">Back</button>
+    </div>
+    <div fxFlex="60"></div>
+    <div fxFlex="20">
+      <button mat-raised-button color="primary" (click)="save(insuranceInfo.valid && insuranceConsent.valid && photoConsent.valid)">Submit</button>
+    </div>
+  </div>
+</div>
